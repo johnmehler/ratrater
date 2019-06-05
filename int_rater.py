@@ -48,6 +48,10 @@ w_new_rate = StringVar()
 w_new_rate.set('None')
 l_new_rate = StringVar()
 l_new_rate.set('None')
+res1 = StringVar()
+res1.set("wins: ")
+res2 = StringVar()
+res2.set("loses: ")
 
 #### Select School
 school_entry = Entry(ratings, textvariable = school_name, font=("Times New Roman", 12),width=3)
@@ -174,14 +178,18 @@ def rate():
         r = result.get()
         if r == 'D':
             res = 0
+            res1.set("draws: ")
+            res2.set("draws: ")
         else:
             res = 1
+            res1.set("wins: ")
+            res2.set("loses: ")
         change = int(k*res + diff*.1)
         winner_new_rating = (winner_rating + change + inflation_value)
         loser_new_rating = (loser_rating - change + inflation_value)
 
-        print(winner, winner_name, "wins: ", winner_rating, "-->", winner_new_rating)
-        print(loser, loser_name, "loses: ", loser_rating, "-->", loser_new_rating)
+        print(winner, winner_name, res1.get(), winner_rating, "-->", winner_new_rating)
+        print(loser, loser_name, res2.get(), loser_rating, "-->", loser_new_rating)
     
 #        cursor.execute("UPDATE KIDS SET Rating = ? WHERE LocalID = ?", winner_new_rating, winner)
 #        cursor.execute("UPDATE KIDS SET Rating = ? WHERE LocalID = ?", loser_new_rating, loser)
