@@ -5,15 +5,15 @@ Python script to interact with US Chess Center KIDS database
 1. Replace the placeholder variables with the username, pass, server, and database name. 
 2. Set up an ODBC data source on your computer.
 
-  a. For Windows, that means typing "ODBC" in the search bar and selecting "ODBC data sources (32-bit)"
+      a. For Windows, that means typing "ODBC" in the search bar and selecting "ODBC data sources (32-bit)"
 
-  b. Add "ODBC Driver 17 for SQL server". The name and description are for your benefit, the server name must match the server you're working on.
+      b. Add "ODBC Driver 17 for SQL server". The name and description are for your benefit, the server name must match the server you're working on.
 
-  c. Authenticate with SQL Server Authentication, and use the credentials you were given. 
+      c. Authenticate with SQL Server Authentication, and use the credentials you were given. 
 
-  d. Continue through and select finish, then verify that the tests connect properly.
+      d. Continue through and select finish, then verify that the tests connect properly.
 
-  e. Verify that the program loads when you run it.
+      e. Verify that the program loads when you run it.
   
 ## TODO
 ~~1. Update export() to include first and last names~~
@@ -23,10 +23,10 @@ Python script to interact with US Chess Center KIDS database
 ~~3. Update rate() and save() methods to have the dialog window display the result as "draw" instead of a "win"/"loss".~~
 
 4. Split rate() and save() methods into cases using switches and add several new options
-  a. F - The bottom player was forfeited. Subtract an additional 25 points from the rating of the loser.
+      a. F - The bottom player was forfeited. Subtract an additional 25 points from the rating of the loser.
 
-  b. X - Double forfeit. Both players lose 75 points.
+      b. X - Double forfeit. Both players lose 75 points.
   
-  c. In the case that the result is not one of the accepted results, do not make a change and print a message to the user.
+      c. In the case that the result is not one of the accepted results, do not make a change and print a message to the user.
 
 5. If a rating is under 1000, an error message should be printed and no changes should be made.
