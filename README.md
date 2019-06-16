@@ -22,7 +22,7 @@ Python script to interact with US Chess Center KIDS database
 
 ~~3. Update rate() and save() methods to have the dialog window display the result as "draw" instead of a "win"/"loss".~~
 
-  4. Split rate() and save() methods into cases using switches and add several new options
+4. Split rate() and save() methods into cases using switches and add several new options
      
       a. F - The bottom player was forfeited. Subtract an additional 25 points from the rating of the loser.
 
