@@ -23,8 +23,8 @@ Python script to interact with US Chess Center KIDS database
 ~~3. Update rate() and save() methods to have the dialog window display the result as "draw" instead of a "win"/"loss".~~
 
 4. Split rate() and save() methods into cases using switches and add several new options
---a. **F** - The bottom player was forfeited. Subtract an additional 25 points from the rating of the loser.
---b. **X** - Double forfeit. Both players lose 75 points.
---c. If the result is not one of the accepted results, print am error message to the user and do not make a change.
+⋅⋅a. **F** - The bottom player was forfeited. Subtract an additional 25 points from the rating of the loser.
+⋅⋅b. **X** - Double forfeit. Both players lose 75 points.
+⋅⋅c. If the result is not one of the accepted results, print am error message to the user and do not make a change.
 
 5. If a rating is under 1000, an error message should be printed and no changes should be made.
