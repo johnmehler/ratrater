@@ -122,11 +122,19 @@ def export():
     ids = cursor.fetchall()
     cursor.execute("SELECT Rating FROM KIDS WHERE LocalID LIKE ? ORDER BY LocalID", var)
     ratings = cursor.fetchall()
+    cursor.execute("SELECT firstname FROM KIDS WHERE LocalID LIKE ? ORDER BY LocalID", var)
+    firstnames = cursor.fetchall()
+    cursor.execute("SELECT lastname FROM KIDS WHERE LocalID LIKE ? ORDER BY LocalID", var)
+    lastnames = cursor.fetchall()
 
     counter1=0
     counter2=0
+    counter3=0
+    counter4=0
     id_list = []
     rating_list = []
+    first_list = []
+    last_list = []
 
     for val in ids:
         id_list += val
@@ -142,7 +150,22 @@ def export():
         ws.write(counter2, 1, obj)
         counter2 += 1
 
+    for val in firstnames:
+        first_list += val
+
+    for val in lastnames:
+        last_list += val
+
+    for obj in first_list:
+        ws.write(counter3, 2, obj)
+        counter3 += 1
+        
+    for obj in last_list:
+        ws.write(counter4, 3, obj)
+        counter4 += 1
+        
     wb.save('school.xls')
+    print('Exported school code:', school_name.get())
 
 #### Clear method -----------------------------
 
