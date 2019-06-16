@@ -16,13 +16,10 @@ Python script to interact with US Chess Center KIDS database
       e. Verify that the program loads when you run it.
   
 ## TODO
-  ~~1. Update export() to include first and last names~~
 
-2. Create an "undo" button to undo the last game result that has been entered after hitting the "save changes" button in the Ratrater game results window.
+1. If a rating is under 1000, an error message should be printed and no changes should be made.
 
-  ~~3. Update rate() and save() methods to have the dialog window display the result as "draw" instead of a "win"/"loss".~~
-
-4. Split rate() and save() methods into cases using switches and add several new options
+2. Split rate() and save() methods into cases using switches and add several new options
 
       a. **F** - The bottom player was forfeited. Subtract an additional 25 points from the rating of the loser.
 
@@ -30,4 +27,9 @@ Python script to interact with US Chess Center KIDS database
 
       c. If the result is not one of the accepted results, print am error message to the user and do not make a change.
 
-5. If a rating is under 1000, an error message should be printed and no changes should be made.
+3. Create an "undo" button to undo the last game result that has been entered after hitting the "save changes" button in the Ratrater game results window.
+
+## DONE
+
+~~1. Update export() to include first and last names~~
+~~2. Update rate() and save() methods to have the dialog window display the result as "draw" instead of a "win"/"loss".~~
